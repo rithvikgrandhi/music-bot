@@ -1,2 +1,2 @@
 # music-bot
-bot that plays music from youtube(alternative to groovy)
+discord bot that plays music from youtube(alternative to groovy)
