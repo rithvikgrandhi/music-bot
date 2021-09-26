@@ -635,6 +635,37 @@ async def botstop(ctx):
 @bot.command()
 async def invite(ctx):
     await ctx.send("http://www.long.rip/mn1qxd")
+    
+# removing the inbuilt help command 
+bot.remove_command('help')
+
+#Help command
+@bot.command()
+async def help(ctx):
+    embed = discord.Embed(title="commands", color=discord.Color.random())
+    embed.add_field(name="-ping", value="To test ping", inline=False)
+    embed.add_field(name="-join", value="Joins a voice channel", inline=False)
+    embed.add_field(name="-leave", value="Clears the queue and leaves the voice channel", inline=False)
+    embed.add_field(name="-loop", value="Loops the currently playing song", inline=False)
+    embed.add_field(name="-now", value="Displays the currently playing song", inline=False)
+    embed.add_field(name="-pause", value="Pauses the currently playing song", inline=False)
+    embed.add_field(name="-play", value="Plays a song", inline=False)
+    embed.add_field(name="-queue", value="Shows the player's queue", inline=False)
+    embed.add_field(name="remove", value="Removes a song from the queue at a given index", inline=False)
+    embed.add_field(name="-resume", value="Resumes a currently paused song", inline=False)
+    embed.add_field(name="-search", value="Searches youtube", inline=False)
+    embed.add_field(name="-shuffle", value="Shuffles the queue", inline=False)
+    embed.add_field(name="-skip", value="Vote to skip a song. The requester can automatically skip", inline=False)
+    embed.add_field(name="-stop", value="Stops playing song and clears the queue", inline=False)
+    embed.add_field(name="-summon", value="Summons the bot to a voice channel", inline=False)
+    embed.add_field(name="-volume", value="Sets the volume of the player", inline=False)
+    embed.add_field(name="-shuffle", value="Shuffles the queue", inline=False)
+    embed.add_field(name="-shuffle", value="Shuffles the queue", inline=False)
+    embed.add_field(name="-snipe", value="Enables you to see the last deleted message", inline=False)
+    embed.add_field(name="-invite", value="Sends the invite link of the bot", inline=False)
+    embed.add_field(name="-contribute", value="Sends the repo link of the bot code in DM", inline=False)
+    await ctx.send(embed=embed)
+
 
 keep_alive()
 
